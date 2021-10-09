@@ -8,10 +8,9 @@
   else{    
     include('./includes/header.php');
   }
+ 
+   echo '<h1>Bienvenido '.$_SESSION['usuario'] .'</h1>' ;
 
- ?>
-                    
-<h1>Bienvenido <?php echo $_SESSION['usuario'] ?>!</h1> 
-
-<?php include('./includes/footer.php'); ?>
+  include('./includes/footer.php');
+?>
 

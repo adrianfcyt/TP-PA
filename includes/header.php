@@ -25,41 +25,38 @@
      if(isset($_SESSION['usuario'])){        
         echo '
         <a class="navbar-brand" href="./inicio.php">
-            <img src="./imagenes/UADERlogo.png" alt="" width="150" height="auto" class="d-inline-block align-top">
+            <img src="./imagenes/UADERlogo.png" alt="" width="100" height="auto" class="d-inline-block align-top">
             <span>Programación Avanzada 2021</span>
         </a>';
     }
     else{
         echo '
         <a class="navbar-brand" href="./index.php">
-            <img src="./imagenes/UADERlogo.png" alt="" width="150" height="auto" class="d-inline-block align-top">
+            <img src="./imagenes/UADERlogo.png" alt="" width="100" height="auto" class="d-inline-block align-top">
             <span>Programación Avanzada 2021</span>
-        </a>'
-    ;
+        </a>';
     }
     ?>
     
-</br>
-        <ul class="navbar-nav"> <!-- Para usar la class Active tambien necesitamos js-->
-            <li class="nav-item">
-                <a class="nav-link" href="./contacto.php">Contacto</a>
-            </li>
-            <?php
-             if(isset($_SESSION['usuario'])){
+    <ul class="navbar-nav"> <!-- Para usar la class Active tambien necesitamos js-->
+        <li class="nav-item">
+            <a class="nav-link" href="./contacto.php">Contacto</a>
+        </li>
+        <?php
+            if(isset($_SESSION['usuario'])){
                 echo '<li class="nav-item">
                 <a class="nav-link">Logueado como: ';
                 echo $_SESSION['usuario'].'</a></li>';
                 echo '<li class="nav-item">
-                <a class="btn btn-primary" href="logout.php" role="button">Cerrar Sesión</a>
+                <a class="btn btn-secondary" href="logout.php" role="button">Cerrar Sesión</a>
                 </li>';
                 
             }
             else{ 
-            echo '<li class="nav-item">
-                <a class="nav-link" href="./login.php">Iniciar Sesion</a>
-            </li>';
+                echo '<li class="nav-item">
+                <a class="btn btn-primary" href="./login.php">Iniciar Sesion</a>
+                </li>';
             }
-            ?>                       
-        </ul>
-    <!-- </div> -->
+        ?>                       
+    </ul>    
 </nav>

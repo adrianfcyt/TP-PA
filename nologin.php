@@ -1,6 +1,6 @@
 <?php
 
-if ( !isset($_SESSION['rand_code']) )
+if (!isset($_SESSION['rand_code']) )
 {
   unset($_SESSION['rand_code']);
 }
@@ -13,7 +13,7 @@ $length = 20;
 
 for ($i = 0; $i < $length; $i++)
 {
-  $token.= $a{rand(0, 61)};
+	$token.= $a{rand(0, 61)};
 }
 
 $_SESSION['token']=$token;
@@ -32,13 +32,12 @@ $_SESSION['token']=$token;
 		</div>
 		<div class="form-group">
 			<div class="div-captcha">
-                <label for="captcha">Código:</label>
-                    <img src="includes/rdnimg.php" >
-                    <input type="text" class="form-control" name="rand_code" value="" required>
+                <img class= "img_code" src="includes/rdnimg.php" ><br>
+                <input type="text" class="form-control" name="rand_code" placeholder="Escriba el código" value="" required>
 			</div>
 		</div>
 		<div class="form-group">
-			<input type="submit" class="btn btn-primary" name="bt_submit" value="Ingresar"/>			
+			<input type="submit" class="btn btn-primary" name="bt_submit" value="Ingresar" style="margin:0px auto; display:block;"/>			
 		</div>
 	</form>
 	</div>

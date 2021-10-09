@@ -16,10 +16,10 @@
         }
         $_SESSION['rand_code'] = $str;
     }
-    header ('Content-Type: image/png');
-    $im = imagecreatetruecolor(80, 40);
-    $color_texto = imagecolorallocate($im, 255, 0, 0);
-    $font = imageloadfont('sim.gdf');
-    imagestring($im, $font, 10, 0, $str, $color_texto);
-    imagepng($im);
-    imagedestroy($im);
+        header ('Content-Type: image/png');
+        $im = imagecreatetruecolor(80, 40);
+        $color_texto = imagecolorallocate($im, 255, 0, 0);
+        $font = imageloadfont('sim.gdf');
+        imagestring($im, $font, 10, 0, $str, $color_texto);
+        imagepng($im);
+        imagedestroy($im);

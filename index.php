@@ -5,8 +5,8 @@
 	}
 	include('includes/header.php'); 
 ?>
-		
-	<span class="texto"> Esta es la primer entrega del Trabajo Practico 1 - 2021</span>
+	
+	<img class= "img_index" src="./imagenes/desarrollo-web.png" alt="">	
 
 <?php
 	include('includes/footer.php');
